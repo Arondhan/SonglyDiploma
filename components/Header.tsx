@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         <div className="flex justufy-between items-center gap-x-4">
           {user ? (
             <div className="flex gap-x-4 items-center">
-              <Button onClick={handleLogout}>Logout</Button>
+              <Button onClick={handleLogout}>Выйти</Button>
               <Button className="bg-white" onClick={() => router.push("/account")}>
                 <FaUserAlt />
               </Button>
@@ -75,12 +75,12 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
             <>
               <div>
                 <Button className="bg-transparent text-neutral-300 font-medium" onClick={authModal.onOpen}>
-                  Sign up
+                  Регистрация
                 </Button>
               </div>
               <div>
                 <Button className="bg-white px-6 py-2" onClick={authModal.onOpen}>
-                  Log in
+                  Вход
                 </Button>
               </div>
             </>

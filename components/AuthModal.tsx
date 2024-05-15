@@ -32,7 +32,7 @@ const AuthModal = () => {
   }
 
   return (
-    <Modal title="Welcome back" description="Login to your account." isOpen={isOpen} onChange={onChange}>
+    <Modal title="Добро пожаловать" description="Войдите в свой аккаунт" isOpen={isOpen} onChange={onChange}>
       <Auth
         supabaseClient={supabaseClient}
         providers={["github"]}

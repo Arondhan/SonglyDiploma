@@ -46,7 +46,7 @@ const UploadModal = () => {
       const songFile = values.song?.[0]
 
       if (!imageFile || !songFile || !user) {
-        toast.error("Missing fields")
+        toast.error("Заполните все пункты")
         return
       }
 
@@ -62,7 +62,7 @@ const UploadModal = () => {
 
       if (songError) {
         setIsLoading(false)
-        return toast.error("Failed song upload")
+        return toast.error("Ошибка при загрузке трека")
       }
 
       // Upload image
@@ -75,7 +75,7 @@ const UploadModal = () => {
 
       if (imageError) {
         setIsLoading(false)
-        return toast.error("Failed image upload")
+        return toast.error("Ошибка при загрузке изображения")
       }
 
       // Create record
@@ -93,11 +93,11 @@ const UploadModal = () => {
 
       router.refresh()
       setIsLoading(false)
-      toast.success("Song created!")
+      toast.success("Трек загружен!")
       reset()
       uploadModal.onClose()
     } catch (error) {
-      toast.error("Something went wrong")
+      toast.error("Что-то пошло не так!")
     } finally {
       setIsLoading(false)
     }
@@ -109,7 +109,7 @@ const UploadModal = () => {
         <Input id="title" disabled={isLoading} {...register("title", { required: true })} placeholder="Song title" />
         <Input id="author" disabled={isLoading} {...register("author", { required: true })} placeholder="Song author" />
         <div>
-          <div className="pb-1">Select a song file</div>
+          <div className="pb-1">Выберите файл трека</div>
           <Input
             placeholder="test"
             disabled={isLoading}
@@ -120,7 +120,7 @@ const UploadModal = () => {
           />
         </div>
         <div>
-          <div className="pb-1">Select an image</div>
+          <div className="pb-1">Выберите изображение</div>
           <Input
             placeholder="test"
             disabled={isLoading}
@@ -131,7 +131,7 @@ const UploadModal = () => {
           />
         </div>
         <Button disabled={isLoading} type="submit">
-          Create
+          Создать
         </Button>
       </form>
     </Modal>

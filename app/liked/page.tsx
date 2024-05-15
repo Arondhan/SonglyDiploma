@@ -17,8 +17,8 @@ export default async function Liked() {
               <Image className="object-cover" src="/images/liked.png" alt="Playlist" />
             </div>
             <div className="flex flex-col gap-y-2 mt-4 md:mt-0">
-              <p className="hidden md:block font-semibold text-sm">Playlist</p>
-              <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold">Liked songs</h1>
+              <p className="hidden md:block font-semibold text-sm">Плейлист</p>
+              <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold">Любимые</h1>
             </div>
           </div>
         </div>
