@@ -16,7 +16,7 @@ export default async function Search({ searchParams }: SearchProps) {
     <div className="bg-neutral-900 rounded-lg w-full h-full overflow-hidden overflow-y-auto">
       <Header className="from-bg-neutral-900">
         <div className="mb-2 flex flex-col gap-y-6">
-          <h1 className="text-blue-500 text-3xl font-semibold">Search</h1>
+          <h1 className="text-blue-500 text-3xl font-semibold">Поиск</h1>
           <SearchInput />
         </div>
       </Header>

@@ -1,5 +1,5 @@
 import "./globals.css"
-import { Figtree } from "next/font/google"
+import { Josefin_Sans } from "next/font/google"
 
 import Sidebar from "../components/Sidebar"
 import SupabaseProvider from "./providers/SupabaseProvider"
@@ -10,11 +10,11 @@ import getSongsByUserId from "@/actions/getSongsByUserId"
 import Player from "@/components/Player"
 import getActiveProductsWithPrices from "@/actions/getActiveProductsWithPrices"
 
-const figtree = Figtree({ subsets: ["latin"] })
+const figtree = Josefin_Sans({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Spotify clone",
-  description: "Listen to music!",
+  title: "Songly Diploma",
+  description: "21-11-3 ISiP",
 }
 
 export const revalidate = 0

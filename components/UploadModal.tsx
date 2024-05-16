@@ -104,10 +104,10 @@ const UploadModal = () => {
   }
 
   return (
-    <Modal title="Add a song" description="Upload an mp3 file" isOpen={uploadModal.isOpen} onChange={onChange}>
+    <Modal title="Добавить трек на площадку" description="Загрузите файл" isOpen={uploadModal.isOpen} onChange={onChange}>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-4">
-        <Input id="title" disabled={isLoading} {...register("title", { required: true })} placeholder="Song title" />
-        <Input id="author" disabled={isLoading} {...register("author", { required: true })} placeholder="Song author" />
+        <Input id="title" disabled={isLoading} {...register("title", { required: true })} placeholder="Название трека" />
+        <Input id="author" disabled={isLoading} {...register("author", { required: true })} placeholder="Автор трека" />
         <div>
           <div className="pb-1">Выберите файл трека</div>
           <Input

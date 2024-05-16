@@ -38,7 +38,7 @@ const AccountContent = () => {
     <div className="mb-7 px-6">
       {!subscription && (
         <div className="flex flex-col gap-y-4">
-          <p>No active plan.</p>
+          <p>Нет активной подписки.</p>
           <Button onClick={subscribeModal.onOpen} className="w-[300px]">
             Subscribe
           </Button>
@@ -47,12 +47,12 @@ const AccountContent = () => {
       {subscription && (
         <div className="flex flex-col gap-y-4">
           <p>
-            You are currently on the
+            В данный момент у вас подключена
             <b> {subscription?.prices?.products?.name} </b>
-            plan.
+            подписка
           </p>
           <Button disabled={loading || isLoading} onClick={redirectToCustomerPortal} className="w-[300px]">
-            Open customer portal
+            Перейти на поддержку пользователей
           </Button>
         </div>
       )}

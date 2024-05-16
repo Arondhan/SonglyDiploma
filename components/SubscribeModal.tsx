@@ -42,12 +42,12 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({ products }) => {
     setPriceIdLoading(price.id)
     if (!user) {
       setPriceIdLoading(undefined)
-      return toast.error("Must be logged in")
+      return toast.error("Войдмте в аккаунт")
     }
 
     if (subscription) {
       setPriceIdLoading(undefined)
-      return toast("Already subscribed")
+      return toast("Вы уже подписаны")
     }
 
     try {
@@ -65,14 +65,14 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({ products }) => {
     }
   }
 
-  let content = <div className="text-center">No products available.</div>
+  let content = <div className="text-center">Нет доступных предложений.</div>
 
   if (products.length) {
     content = (
       <div>
         {products.map(product => {
           if (!product.prices?.length) {
-            return <div key={product.id}>No prices available</div>
+            return <div key={product.id}>Цены недоступны</div>
           }
 
           return product.prices.map(price => (
@@ -90,7 +90,7 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({ products }) => {
   }
 
   if (subscription) {
-    content = <div className="text-center">Already subscribed.</div>
+    content = <div className="text-center">Вы уже подписаны</div>
   }
 
   return (
